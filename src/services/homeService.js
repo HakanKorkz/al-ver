@@ -7,16 +7,15 @@ export default class HomeService {
     }
 
 
-    homeForm(...data) {
-        let ver = []
+    homeForm(...data) {       
+       let list= document.getElementById('list')
         data.map(data => {
             let id = this.Form(data.id)
             let item = this.Form(data.item)
             let quantity = this.Form(data.quantity)
             let price = this.Form(data.price)
-            ver=id+'\n'+item+'\n'+quantity+'\n'+price
+           list.innerHTML=id+'\n'+item+'\n'+quantity+'\n'+price
         })       
-       document.getElementById('list').innerHTML=ver
 
     }
 
