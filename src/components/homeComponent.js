@@ -1,11 +1,40 @@
+import Data from "../database/homeData.js";
 import homeModel from "../models/homeModel.js";
 import HomeService from "../services/homeService.js";
 
-let Cart = {id: 1 , item: 'ev', quantity: 1 , price: 500000}
-let Cart2 = {id: 2 , item: 'Araba', quantity: 2 , price: 10000}
-let homeMode = new homeModel(Cart)
-let homeMode2 = new homeModel(Cart2)
+let CartData = new Data()
+
+let CartCount=CartData.cart().length
+
+let homeMode 
 
 let HomeServic = new HomeService()
 
-HomeServic.homeForm(homeMode,homeMode2)
+for (let i = 0; i < CartCount; i++) {
+
+   homeMode=   new homeModel(CartData.cart()[i])
+
+   HomeServic.homeForm(homeMode)
+    
+}
+
+let btn = document.getElementsByClassName('click')
+
+let Count=btn.length
+       
+for (let i = 0; i < Count; i++) {
+
+
+btn[i].addEventListener('click',()=>{
+    
+  let dataId=btn[i].getAttribute('data-id')
+
+  console.log(dataId)
+
+
+
+})
+
+}
+
+

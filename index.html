@@ -1,22 +1,46 @@
 <html lang="tr">
-  <head>
-    <title>JavaScript</title>
-    <script src="node_modules/traceur/bin/traceur.js"></script>
-    <script src="node_modules/es6-module-loader/dist/es6-module-loader-dev.js"></script>
-    <style>
-      * {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background-color: rgb(77, 74, 74);
-      color: seashell;
-    }
-    </style>
-  </head>
-  <body>
-    <ul id="list">
+<head>
+  <title>JavaScript</title>
+  <script src="node_modules/traceur/bin/traceur.js"></script>
+  <script src="node_modules/es6-module-loader/dist/es6-module-loader-dev.js"></script>
+  <link rel="stylesheet" href="./assets/style.css">
+  <style>
 
-    </ul>
-      <script>
-          System.import('src/components/homeComponent.js');
-      </script> 
-  </body>
+  </style>
+</head>
+<body>
+  <div class="contanier">
+    <div class="justify-content-center">
+      <div class="priceArea justify-content-center">
+        <h3>Ürünler</h3>
+        <table class="table">
+          <thead>
+            <td class="id">
+              #
+            </td>
+            <td>
+              Ürün
+            </td>
+            <td>
+              Adet
+            </td>
+            <td>
+              Değer
+            </td>
+            <td>
+              işlem
+            </td>
+          </thead>
+          <tbody id="list">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    System.import('src/components/homeComponent.js');
+  </script>
+</body>
+
 </html>
