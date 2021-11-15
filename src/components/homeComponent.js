@@ -6,7 +6,7 @@ let CartData = new Data()
 
 let CartCount=CartData.cart().length
 
-let homeMode 
+let homeMode  
 
 let HomeServic = new HomeService()
 
@@ -37,4 +37,19 @@ btn[i].addEventListener('click',()=>{
 
 }
 
+const ekle = document.getElementById('ekle')
 
+ekle.addEventListener('submit',()=> {
+
+  let inputs = document.getElementsByClassName("data")
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i];
+
+    if (input.value==null ||  input.value=="") return false
+
+    HomeServic.homeAdd(input.value)
+   
+    
+  }
+
+})

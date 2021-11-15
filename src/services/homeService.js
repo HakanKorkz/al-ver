@@ -22,4 +22,8 @@ export default class HomeService {
 
     }
 
+    homeAdd(data) {
+        console.log(data)
+    }
+
 }
